@@ -1,0 +1,255 @@
+*{
+    font-family: 'monospace';
+    color: #0c0c8f;
+    text-shadow: 5px 5px 10px rgb(46, 30, 30);
+}
+
+main{
+    height: 480px;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+}
+
+.contenedor-main{
+    background-size: 100%;
+    background-repeat: round;
+    
+}
+
+section{
+    margin-left: 0%;
+}
+
+#menu-principal{
+    width: 70%;
+    height: 60%;
+    flex-direction: column;
+    margin-left: 20%;
+    margin-top: 10%;
+}
+
+#menu-principal p{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+#guardado-palabra{
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10%;
+    margin-left: 25%;
+    width: 60%;
+    height: 80%;
+    max-height: 360px;
+}
+
+
+#ingrese-palabra{
+    width: 90%;
+    height: 40%;
+    margin: 5px auto 1px;
+    text-align: center;
+    text-indent: 0%;
+    font-size: 125%;
+    resize: none;
+    padding-top: 10px;
+    border-radius: 10px;
+    background-color: whitesmoke;
+}
+
+#contenedor-maximo{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 16px;
+    margin-top: 5px;
+    height: 16px;
+}
+
+#contenedor-maximo img {
+    margin-right: 5px;
+}
+
+.mensaje-solo-letras-visible{
+    display: block;
+    height: 0;
+    color: red;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    animation-name: parpadeo;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+
+@keyframes parpadeo {  
+    0% { color:transparent; }
+    10% { color:red; }
+    20% { color:transparent; }
+    30% { color:red; }
+    40% { color:transparent; }
+    50% { color:red; }
+    60% { color:transparent; }
+    70% { color:red; }
+    80% { color:transparent; }
+    90% { color:red; }
+    100% { color:transparent; }
+}
+
+#contenedor-lienzo{
+    margin: auto;
+    width: 80%;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+canvas{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.contenedor-lienzo-tiembla{
+    animation-name: tiembla;
+    animation-duration: 0.01s;
+    animation-timing-function: linear;
+    animation-iteration-count: 100;
+    
+}
+
+@keyframes tiembla{
+    0%  {transform:rotateZ(-5deg); }
+    50% {transform:rotateZ( 0deg); }
+    100%  {transform:rotateZ(+5deg); }
+    
+  }
+
+#lienzo{
+    padding: 0;
+    margin: auto;
+    display: block;
+}
+
+.contenedor-ul{
+    width: 75%;
+    height: 20px;
+    margin: 0 auto;
+}
+
+ul{
+    display: flex;
+    padding: 0;
+    justify-content: center;
+    flex-wrap:nowrap;
+    margin: 0;
+}
+
+#letras-no-encontradas{
+    flex-direction: row;
+}
+
+li{
+    display: inline;
+    width: 1.5em;
+    margin: 0 5px;
+    color: transparent;    
+    text-align: center;
+}
+
+#palabra-elegida li{
+    border-bottom: 1px solid blue;
+    font-weight: bold;
+}
+
+.palabra-elegida-acertada{
+    color: blue;
+}
+
+.palabra-elegida-no-acertada{
+    color: rgb(83, 203, 83);
+}
+
+#letras-no-encontradas li{
+    color: red;
+}
+
+#teclado-virtual {
+    width: 260px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.boton-letra {
+    width: 24px;
+    height: 22px;
+    margin: 2px;
+    color: blue;
+    background-color: whitesmoke;
+    background-size: 20px 70px;
+    background-position:center;   
+    border: 1px solid blue;
+    border-radius: 5px;
+}
+
+.boton-letra:hover{
+    background-color: rgba(128, 128, 128, 0.5);
+}
+
+.contenedor-botones{
+    display: flex;
+    margin-left: 25%;
+    flex-direction: column;
+    height: 70%;
+}
+
+.contenedorBotonesJugando{
+    align-content: center;
+    height: auto;
+    display: flex;
+    margin-top: 2%;
+    width: 50%;
+    padding: 1% 10% 1% 25%;
+ 
+}
+
+
+.invisible{
+    display: none;
+    color: transparent;
+    visibility:hidden;
+}
+
+@media screen and (min-width: 1024px ){
+
+    main{
+        width: 980px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 620px ){
+
+    #contenedor-lienzo{
+        margin-top: 5%;
+    }
+
+    .contenedor-main{
+        background-repeat: no-repeat;
+    } 
+
+    #teclado-virtual{
+        width: 60%;
+    }
+
+    .boton-letra{
+        width: 10%;
+    }
+
+    #guardado-palabra{
+        height: 360px;
+        margin-top: 90px;
+    }
+
+}

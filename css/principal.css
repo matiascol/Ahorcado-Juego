@@ -1,0 +1,183 @@
+*{
+    font-family: 'monospace';
+    color:rgb(80, 47, 25);
+}
+
+html{
+    background: url(../files/fondoPaginaLadrillos.jpg);
+    background-size: 100vw 100vh;
+    background-color: #e5e5f7;
+    
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    margin:0 auto;
+}
+
+header{
+    display: flex;
+    padding-left: 1%;
+    justify-content: center;
+    align-items: normal;
+    margin-top: 8px;
+}
+
+.contenedor-body{
+    height: 100%;
+}
+
+.tituloPagina{
+    float: left;  
+}
+
+.imagenLogo{
+    float: left;
+}
+
+.titulo{
+    margin: 1px;
+
+    text-shadow: 0px -5px 8px #000092,
+                 5px 5px 10px white;
+}
+
+h1.titulo{
+    font-size: 2.5em;
+    font-weight: normal;
+    font-family: monospace;
+}
+
+h3.titulo{
+    font-size: 1em;
+    font-weight: normal;
+}
+
+.logoAlura{
+    width: 80%;
+}
+
+#ingresar-juego{
+    background: rgba(10,56,113,1);
+    color: #FFFFFF;
+    margin: 0 0 3%;
+}
+
+.botones{
+    font-family: monospace;
+    color: rgb(19, 19, 80);
+    text-shadow: 5px 5px 10px white;
+    background: #44c4f7;
+    width: 50%;
+    height: 25%;
+    border-radius: 10px
+
+}
+
+.botones:hover{
+    background:#44c4f7;
+	-ms-box-shadow:1px 1px 10px 1px #1a89b5;
+	-o-box-shadow:1px 1px 10px 1px #1a89b5;
+	-webkit-box-shadow:1px 1px 10px 1px #1a89b5;
+	-moz-box-shadow:1px 1px 10px 1px #1a89b5;
+	box-shadow:1px 1px 30px 5px #1a89b5;
+}
+
+.invisible{
+    display: none;
+    color: transparent;
+}
+
+.ventana::backdrop {
+    background: rgba(0,0,0,.4);
+    backdrop-filter: blur(3px);
+}
+
+.ventana {
+    flex-direction: column;
+    border: 7px double rgb(176, 218, 231);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 10px 10px 10px -1px black;
+    background-color: rgb(16, 50, 95);
+    justify-content: center;
+}
+
+.ventana p, .ventana strong{
+    color: rgb(208, 212, 221);
+    text-shadow: none;
+}
+
+.botones-oscuros, .botones-claros{
+    display: block;
+    margin: 5px auto;
+    width: 90%;
+    height: 25px;
+    border-radius: 5px;
+    border-color: rgb(45, 66, 122);
+    font-size:medium;
+    text-shadow: none;
+    transition: background-color 0.5s linear;
+}
+
+.botones-oscuros{
+    background-color: rgb(4, 25, 70);
+    color: rgb(190, 226, 236);
+}
+
+.botones-oscuros:hover{
+    background-color: rgb(26, 11, 1);
+    cursor: pointer;
+}
+
+.botones-claros{
+    background-color: rgb(179, 230, 246);
+    color: rgb(1, 5, 26);
+}
+
+.botones-claros:hover{
+    background-color: rgb(69, 66, 251);
+    cursor: pointer;
+}
+
+footer{
+    background-color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top:40px;
+}
+
+.iconos{
+    margin: auto 5px;
+}
+
+footer div{
+    position: relative;
+    display: inline;
+    margin: 0 auto;
+}
+
+footer p{
+    margin: 2px auto;
+}
+
+@media screen and (min-width: 1024px ){
+
+    .tituloPagina{
+        display: flex;
+        align-content: flex-end;
+        align-items: baseline;
+    }
+
+    .titulo{
+        margin-left: 1em;
+    }
+
+}
+
+@media screen and (min-width: 620px ){
+
+
+}

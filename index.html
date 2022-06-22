@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+        <link rel="stylesheet" href="css/principal.css">
+        <link rel="stylesheet" href="css/main.css">
+        <title>Desarrollo</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+    
+    </head>
+    
+    <body onload="inicio(true)">
+        <div class="contenedor-body">
+            <header>
+                <div class="imagenLogo">
+                    <img src="files/LogoAlura.png" alt="Logo Alura" class="logoAlura">
+                </div>
+                <div class="tituloPagina">
+                    <h1 class="titulo">Juguemos al Ahorcado!</h1>
+                </div>
+                
+            </header>
+    
+            <main class="contenedor-main">
+                
+                <section id="menu-principal">
+                    <div class="contenedor-botones">
+                        <button id="ingresar-juego" class="botones" >Comenzar Juego</button>
+                        <button id="guardar-palabra" class="botones">Agregar Nueva Palabra</button>
+                    </div>                
+                    
+                </section>
+
+                <section id="juego" class="invisible">
+                    <span class="invisible" id="mensaje-solo-letras"></span>
+                    <div id="contenedor-lienzo">
+                        <canvas id="lienzo" width="200" height="200"></canvas>
+                    </div>
+        
+                    <div id="contenedor-palabra-elegida" class="contenedor-ul">
+                        <ul id="palabra-elegida">
+                            
+                        </ul>
+                    </div>
+        
+                    <div class="contenedor-ul" id="contenedor-letras-no-encontradas">
+                        <ul id="letras-no-encontradas">
+                           
+                        </ul>
+                    </div>
+
+                    <div id="teclado-virtual">
+
+                    </div>
+        
+                    <div class="contenedorBotonesJugando">
+                        <button id="nuevo-juego" class="botones" >Nuevo Juego</button>
+                        <button id="desistir" class="botones">Rendirse</button>        
+                    </div>
+                        
+                    
+                </section>
+        
+                <section id="guardado-palabra" class="invisible">
+                    <textarea id="ingrese-palabra" placeholder="Escribe acá la palabra nueva" maxlength="8"></textarea>
+                    <div id="contenedor-maximo">
+                        <img src="files/IconoInformacion.png" alt="">
+                        <span>Máximo de 8 letras</span>
+                    </div>
+                    <div class="contenedor-botones">
+                        <button id="agregar-palabra" class="botones">Guardar Palabra</button>
+                        <button id="cancelar-agregar-palabra" class="botones">Cancelar</button>      
+                    </div>
+                    
+                </section>
+            </main>
+            
+            <dialog id="ventana-victoria" class="ventana">
+                <p>¡¡¡GANASTE!!!<strong id="palabra-victoria"></strong></p>
+                <button id="aceptar-victoria" class="botones-oscuros">Aceptar</button>
+            </dialog>
+
+            <dialog id="ventana-perdio" class="ventana">
+                <p>PERDISTE...</p>
+                <button id="aceptar-derrota" class="botones-oscuros">Aceptar</button>
+            </dialog>
+
+            <dialog id="ventana-reinicio" class="ventana">
+                <p>¿Reiniciar el juego?</p>
+                <button id="aceptar-reinicio" class="botones-oscuros">Aceptar</button>
+                <button id="cancelar-reinicio" class="botones-claros">Cancelar</button>
+            </dialog>
+
+            <dialog id="ventana-desistir" class="ventana">
+                <p>¿Terminar el juego?</p>
+                <button id="aceptar-desistir" class="botones-oscuros">Aceptar</button>
+                <button id="cancelar-desistir" class="botones-claros">Cancelar</button>
+            </dialog>
+
+            <dialog id="ventana-verificar-palabra" class="ventana">
+                <p id="msj-verificar-palabra"></p>
+                <button id="aceptar-verificar" class="botones-oscuros">Aceptar</button>
+            </dialog>
+            
+            <footer>
+                <div>
+                    <a href="https://github.com/MartinBzn/Encriptador-AluraOracleONE-Challenge1.git" class="iconos"><img src="files/github-brands.svg" alt="" width="20px"></a>
+                </div>
+    
+                <p>Matias Orsini &copy; 2022</p>
+    
+            </footer>
+        </div>
+    </body>
+
+    
+   
+    <script src="js/dibujo.js"></script>
+    <script src="js/elegir-palabra.js"></script>
+    <script src="js/guardar.js"></script>
+    <script src="js/jugar.js"></script>
+    <script src="js/mensajes.js"></script>
+    <script src="js/principal.js"></script>
+   
+    
+</html>
